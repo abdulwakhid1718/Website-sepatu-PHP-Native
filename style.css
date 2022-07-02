@@ -32,13 +32,11 @@ nav{
     border-radius: 6px;
 }
 
-.logo img{
-    width: 100%;
-}
+.logo img{ width: 100%; }
 
 nav > div{
     display: flex;
-    gap: 10px;
+    gap: 1em;
     align-items: center;
 }
 
