@@ -191,9 +191,9 @@ nav > div span:hover::before{ height: 27px; }
     left: -180px;
 }
 
-#cari input.show{
-    opacity: 1;
-}
+/* BUTTON TOGGLE UNTUK MEMUNCULKAN ELEMEN */
+#cari input.show{ opacity: 1; }
+
 
 .menu-btn {
   position: relative;
@@ -295,13 +295,17 @@ nav > div span:hover::before{ height: 27px; }
         --container: 30px;
     }
     nav ul{ 
-        display: grid; 
+        display: grid; opacity: 0;
+        transform: scale(0);
+        transform-origin: 100% 0;
         position: absolute;
         top: 63px;
         right: 30px;
         background-color: var(--warna-utama);
         padding: 20px;
-    }
+        transition: .8s;
+    } .show { transform: scale(1); opacity: 1;}
+    
     #togle-menu{ display: grid;}
     nav ul li.dropdown::before{ left: 0; }
     nav ul li.dropdown:hover::before{ display: none; }

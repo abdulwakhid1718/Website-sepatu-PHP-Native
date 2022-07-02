@@ -3,8 +3,15 @@ let searchBar = document.getElementById('text');
 
 cari.addEventListener('click', function () {
     searchBar.classList.toggle('show')
-    console.log("asdasd");
 })
+
+
+let menuToggle = document.querySelector('#togle-menu')
+let nav = document.querySelector('nav ul')
+menuToggle.addEventListener('click', function () {
+  nav.classList.toggle('show')
+})
+
 
 
 const menuBtn = document.querySelector('.menu-btn');
