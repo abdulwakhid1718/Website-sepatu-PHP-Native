@@ -323,7 +323,10 @@ nav > div span:hover::before{ height: 27px; }
 }
 
 @media screen and (max-width: 657px) {
-
+    nav > div{
+        gap: 0;
+    }
+    
     .logo-navbar{
         transform: scale(.8) translateX(-18px);
     }
