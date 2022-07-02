@@ -40,6 +40,8 @@ nav > div{
     align-items: center;
 }
 
+nav > div:last-child{ padding-left: 55px;}
+
 nav > div h3{
     font-size: 1.5em;
     margin: 0;
@@ -323,11 +325,9 @@ nav > div span:hover::before{ height: 27px; }
 }
 
 @media screen and (max-width: 657px) {
-    nav > div{
-        gap: 0;
+    :root{
+        --container: 20px;
     }
-    
-    .logo-navbar{
-        transform: scale(.8) translateX(-18px);
-    }
+    nav > div:last-child{ padding-left: 0;}
+    .logo-navbar{ transform: scale(.8) translateX(-18px);}
 }
