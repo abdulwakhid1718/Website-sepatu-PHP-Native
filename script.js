@@ -1,3 +1,11 @@
+// SWIPPERRRR//
+var swiper = new Swiper(".mySwiper", {
+  effect: "cards",
+  grabCursor: true,
+  loop: true
+});
+// ======================================================
+
 let cari = document.getElementById("search");
 let searchBar = document.getElementById('text');
 
@@ -25,3 +33,5 @@ menuBtn.addEventListener('click', () => {
     menuOpen = false;
   }
 });
+
+
