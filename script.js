@@ -5,13 +5,18 @@ var swiper = new Swiper(".mySwiper", {
   loop: true
 });
 // ======================================================
+$('#text').hide()
 
-let cari = document.getElementById("search");
-let searchBar = document.getElementById('text');
-
-cari.addEventListener('click', function () {
-    searchBar.classList.toggle('show')
+$('#search').click(function () {
+  $('#text').toggle("slow")
 })
+
+// let cari = document.getElementById("search");
+// let searchBar = document.getElementById('text');
+
+// cari.addEventListener('click', function () {
+//     searchBar.classList.toggle('show')
+// })
 
 
 let menuToggle = document.querySelector('#togle-menu')
