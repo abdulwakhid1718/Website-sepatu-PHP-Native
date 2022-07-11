@@ -311,8 +311,8 @@ nav > div span:hover::before{ height: 27px; }
     display: grid; gap: 50px;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     align-items: center;
-    width: 100%;
-    height: 100%;
+    overflow-x: hidden;
+    width: 100%; height: 100%;
     background: linear-gradient(90deg, var(--warna-utama), var(--warna-aksen));
     padding: 0 var(--container);
     position: relative;
