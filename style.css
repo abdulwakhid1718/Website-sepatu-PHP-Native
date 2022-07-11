@@ -330,6 +330,7 @@ nav > div span:hover::before{ height: 27px; }
     font-family: 'Poppins', sans-serif;
     letter-spacing: 2px;
     color: white;
+    overflow-x: hidden;
     z-index: 999;
 }
 .hero::before{
