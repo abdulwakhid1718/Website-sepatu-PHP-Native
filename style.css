@@ -520,15 +520,19 @@ nav > div span:hover::before{ height: 27px; }
     transform: skewY(30deg);
     overflow: hidden;
     box-shadow: 0px 1px 0px #00000020, -1px 0px 10px rgba(0, 0, 0, 0.3);
-    z-index: 1;
+    z-index: 1; 
+}
+.product picture:hover img{
+    transform: skewY(-30deg) rotate(20deg) scale(1.1);
 }
 
 .product picture img {
     filter: drop-shadow(var(--drop-shadow));
     width: 90%;
-    z-index: 1;
-    transform: skewY(-40deg);
+    z-index: 2;
+    transform: skewY(-30deg);
     padding: 25px 0 0 0;
+    transition: .5s;
 }
 .detail{
     display: flex; gap: 10px;
