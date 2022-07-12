@@ -1,7 +1,8 @@
 // SWIPPERRRR //
 var swiper = new Swiper(".mySwiper", {
   effect: "cards",
-  grabCursor: true
+  grabCursor: true,
+  loop: true
 });
 
 // SEARCH BOX //
@@ -16,46 +17,46 @@ function menuToggle() {
   nav.classList.toggle('show')
 }
 
-// SEARCH PRODUCT //
-// function cariProduk(param) {
-//   $('#input-cari').keyup(function () {
-//     let products = param != "semua" ? document.querySelectorAll(`.product[data-kategori = "${param}"]`) : document.querySelectorAll(`.product`);
-//     for (let i = 0; i < products.length; i++) {
-//       let element = products[i].getElementsByTagName("strong")[0];
-//       let txt = element.textContent || element.innerText;
-//       console.log(txt);
-//       if (txt.toUpperCase().indexOf($('#input-cari').val().toUpperCase()) > -1) {
-//         products[i].style.display = ""
-//       }else{
-//         products[i].style.display = "none"
-//       }
-//     }
+// LOAD MORE //
 
-//   })
-// }
 
 // FILTER KATEGORI //
+let parentProducts = document.querySelector('.items');
+let products = document.querySelectorAll('.product');
+
 function filterProducts() {
-  let products = document.querySelectorAll('.product');
-  let kategori = document.querySelectorAll('.kategori');
+  $(document).ready(function () {
+    $('.product').hide();
+  
+    $('.products').children('.product:lt(4)').show()
+  })
+  let kategori = document.querySelector('.categories').children;
   for(let i=0; i<kategori.length; i++){
     kategori[i].onclick = function () {
       for(let x=0; x<kategori.length; x++){
           kategori[x].classList.remove('active');
       }
+      this.classList.add('active');
       const indicatorKategori = this.getAttribute('data-kategori');
-      $(this).addClass('active')
-
+      let find = 0
       document.querySelector('.product-kosong').style.display = 'block';
       for(let z=0; z < products.length; z++) {
         products[z].style.transform = "scale(0)";
         products[z].style.display = "none";
+       
+
         if ((products[z].getAttribute('data-kategori') == indicatorKategori) || indicatorKategori == "semua") {
           document.querySelector('.product-kosong').style.display = 'none';
           products[z].style.transform = "scale(1)";
+          
           products[z].style.display = "block";
+          
+        }else{
+          find = 1
         }
+        // document.querySelector('.product-kosong').style.display = 'flex';
       }
+      console.log(find);
     };
   }
 }
