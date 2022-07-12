@@ -391,12 +391,12 @@ nav > div span:hover::before{ height: 27px; }
 
 
 /* SWIPER HERO */
-.swiper {
+.hero .swiper {
     height: 400px;
     width: 300px;
 }
 
-.swiper .swiper-slide{
+.hero .swiper .swiper-slide{
     /* background-color: #fff; */
     background-color: var(--aksen-kuning);
     border-radius: 20px;
@@ -407,11 +407,11 @@ nav > div span:hover::before{ height: 27px; }
     box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
 }
 
-.swiper .swiper-slide img{ transition: .8s; filter: drop-shadow(var(--drop-shadow));}
-.swiper .swiper-slide:hover img{
+.hero .swiper .swiper-slide img{ transition: .8s; filter: drop-shadow(var(--drop-shadow));}
+.hero .swiper .swiper-slide:hover img{
     transform: scale(.8) rotate(20deg);
 }
-.swiper .swiper-slide .btn-swiper{
+.hero .swiper .swiper-slide .btn-swiper{
     position: absolute;
     bottom: -30px;
     width: 70%;
@@ -421,20 +421,20 @@ nav > div span:hover::before{ height: 27px; }
     border-radius: 20px;
     transition: .8s;
 }
-.swiper .swiper-slide h3,
-.swiper .swiper-slide span{
+.hero .swiper .swiper-slide h3,
+.hero .swiper .swiper-slide span{
     position: absolute;
     background: white;
     color: var(--warna-aksen);
     padding: 10px;
     top: 15px;
 }
-.swiper .swiper-slide h3{
+.hero .swiper .swiper-slide h3{
     right: 0;
     width: 100%;
     z-index: 0;
 }
-.swiper .swiper-slide span{
+.hero .swiper .swiper-slide span{
     border-radius: 30px;
     right: -10px; top: 10px;
     font-weight: 500;
@@ -445,8 +445,8 @@ nav > div span:hover::before{ height: 27px; }
     z-index: 1;
 }
 
-.swiper .swiper-slide:hover .btn-swiper{ bottom: 30px; }
-.swiper .swiper-slide:hover span{ transform: rotate(45deg) scale(1); opacity: 1; }
+.hero .swiper .swiper-slide:hover .btn-swiper{ bottom: 30px; }
+.hero .swiper .swiper-slide:hover span{ transform: rotate(45deg) scale(1); opacity: 1; }
 
 
 /* PRODUCT */
@@ -699,12 +699,20 @@ nav > div span:hover::before{ height: 27px; }
     display: grid;
     gap: 20px;
 }
+.contact .right .btn{
+    width: fit-content;
+    border: none;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    border-radius: 5px;
+    transition: .5s;
+}
+.contact .right .btn:hover{ background-color: var(--warna-utama); }
 .contact .contacts-input{
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
-
 .contact .contact-content{
     background: #eee;
     border-radius: .5rem;
@@ -797,6 +805,109 @@ footer .medsos a:hover{
 
 
 
+
+
+/* HALAMAN DETAIL PRODUK */
+.buy-product{
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    padding: 30px var(--container);
+    width: 100%;
+    background-color: whitesmoke;
+}
+.buy-product .left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dedede;
+    width: 100%;
+    border-radius: 20px 0 0 20px;
+}
+.buy-product .left img { 
+    object-fit: cover; 
+    filter: drop-shadow(var(--drop-shadow));
+}
+.buy-product .right{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #eeee;
+    border-radius: 0 20px 20px 0;
+    padding: 25px;
+}
+.buy-product .right h1{
+    font-size: 2.5em;
+}
+.buy-product .right .varian{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    margin-bottom: 30px;
+}
+.buy-product .right .varian-size{ grid-template-columns: repeat(auto-fit, minmax(35px, 1fr)); }
+.buy-product .right .varian-size .size{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 2px;
+    outline: 1px solid #ddd;
+}
+.buy-product .varian h3{
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+.buy-product .varian > div{
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    color: #000;
+    font-weight: 500;
+    font-size: .8em;
+    position: relative;
+    cursor: pointer;
+}
+.buy-product .varian input{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.buy-product .varian input[type = radio]:checked ~ div{
+    position: absolute; 
+    top: 0; left: 0;
+    border-radius: 20px;
+    width: 100%; height: 100%;
+    outline: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.buy-product .varian-size .size input[type = radio]:checked ~ div{
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.1);
+    outline: 1px solid var(--warna-utama);
+}
+.buy-product .buy{
+    display: flex;
+    gap: 10px;
+}
+.buy-product .buy button{
+    border: none;
+    border-radius: 5px;
+    background-color: var(--warna-utama);
+    letter-spacing: 1px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: .6s;
+}
+.buy-product .buy button:hover{
+    color: var(--warna-utama);
+    background-color: var(--aksen-kuning);
+}
+.buy-product .buy button:last-child{ flex: 1; }
+
 /* tablet */
 @media screen and (max-width: 850px){
     :root{
@@ -869,6 +980,15 @@ footer .medsos a:hover{
     }
 
     .hero .left h1{ color: white;}
+
+    /* HALAMAN DETAIL PRODUCT */
+    .buy-product{ grid-template-columns: 1fr;}
+    .buy-product .left{
+        border-radius: 20px 20px 0 0;
+    }
+    .buy-product .right{
+        border-radius:  0 0 20px 20px;
+    }
 }
 
 @media screen and (max-width: 687px) {

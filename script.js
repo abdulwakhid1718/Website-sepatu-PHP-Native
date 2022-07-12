@@ -4,6 +4,14 @@ var swiper = new Swiper(".mySwiper", {
   grabCursor: true
 });
 
+// SWIPER DETAIL PRODUCT //
+var swiper1 = new Swiper(".detailSwiper", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
 // SEARCH BOX //
 $('#text').hide()
 $('#search').click(function () {
@@ -61,6 +69,15 @@ function filterProducts() {
 }
 
 new filterProducts()
+$('.product').attr("data-aos", "zoom-in-up")
 
+let varianProduct = document.querySelector('.varian-color')
+let span = varianProduct.querySelectorAll('.color')
+let input = document.querySelectorAll('.varian-color input')
+for (let i = 0; i < span.length; i++) {
+  let el = span[i];
+  const atributeColor = input[i].value;
+  el.style.backgroundColor = atributeColor
+}
 
 
