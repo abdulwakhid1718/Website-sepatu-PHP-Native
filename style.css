@@ -824,6 +824,7 @@ footer .medsos a:hover{
     border-radius: 20px 0 0 20px;
 }
 .buy-product .left img { 
+    width: 100%;
     object-fit: cover; 
     filter: drop-shadow(var(--drop-shadow));
 }
@@ -839,6 +840,7 @@ footer .medsos a:hover{
     font-size: 2.5em;
 }
 .buy-product .right .varian{
+    width: 100%;
     display: grid;
     gap: 15px;
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
