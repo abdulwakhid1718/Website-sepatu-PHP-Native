@@ -1,0 +1,16 @@
+/* MESSAGE CSS ELEMEN */
+.message-box {
+  padding: 10px 10px;
+  color: #fff;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.error {
+  background-color: red;
+}
+.warning {
+  background-color: yellow;
+}
+.success {
+  background-color: #00bc8c;
+}
